@@ -5,6 +5,6 @@ src
 .eslintignore
 .eslintrc.json
 .gitignore
-.prettierrc.sj
-.jest.config.js
+.prettierrc.js
+jest.config.js
 tsconfig.json
