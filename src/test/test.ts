@@ -1,4 +1,4 @@
-import {hello} from '../index';
+import {hello} from '../main/index';
 
 test('default', () => {
   expect(hello()).toBe('Hello TypeScript');
