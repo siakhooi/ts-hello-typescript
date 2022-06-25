@@ -4,7 +4,6 @@ on: workflow_call
 
 jobs:
   codecov:
-    needs: test
     name: Codecov
     runs-on: ubuntu-latest
     steps:
