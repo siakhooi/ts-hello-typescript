@@ -1,7 +1,5 @@
 name: Publish to npm registry
-on:
-  release:
-    types: [created]
+on: workflow_call
 
 jobs:
   publish_npm:
