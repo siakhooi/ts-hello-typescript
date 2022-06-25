@@ -7,3 +7,6 @@ test('default', () => {
 test('world', () => {
   expect(hello('World')).toBe('Hello World');
 });
+test('Earth', () => {
+  expect(hello('Earth')).toBe('Hello Earth');
+});
