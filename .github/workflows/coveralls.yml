@@ -1,7 +1,6 @@
 name: Coveralls
 
-on:
-  workflow_call:
+on: workflow_call
 
 jobs:
   coveralls:
