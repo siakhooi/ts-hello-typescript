@@ -19,15 +19,5 @@ jobs:
         with:
           name: coverage-report
           path: ./coverage/
-  coveralls:
-    needs: test
-    name: Coveralls
-    runs-on: ubuntu-latest
-    steps:
       - uses: ./.github/workflows/coveralls.yml
-  codecov:
-    needs: test
-    name: Codecov
-    runs-on: ubuntu-latest
-    steps:
       - uses: ./.github/workflows/codecov.yml
