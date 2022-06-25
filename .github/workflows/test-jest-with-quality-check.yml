@@ -6,22 +6,13 @@ on:
 
 jobs:
   test:
-    name: Jest
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-      - run: npm install
-      - run: npm test
-      - uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: ./coverage/
+    uses: ./.github/workflows/npm-install-test.yml
   coveralls:
     needs: test
     uses: ./.github/workflows/coveralls.yml
   codecov:
     needs: test
     uses: ./.github/workflows/codecov.yml
+  sonar:
+    needs: test
+    uses: ./.github/workflows/sonar.yml
