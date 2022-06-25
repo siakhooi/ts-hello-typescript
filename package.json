@@ -1,6 +1,6 @@
 {
   "name": "@siakhooi/hello-typescript",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Hello TypeScript",
   "main": "dist/main/index.js",
   "types": "dist/main/index.d.ts",

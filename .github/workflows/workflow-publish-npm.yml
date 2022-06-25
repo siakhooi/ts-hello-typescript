@@ -1,8 +1,0 @@
-name: Publish to npm registry
-on:
-  release:
-    types: [created]
-
-jobs:
-  publish_gqr:
-    uses: ./.github/workflows/deploy-publish-npm.yml

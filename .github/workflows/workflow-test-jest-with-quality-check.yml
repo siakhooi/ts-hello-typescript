@@ -1,4 +1,4 @@
-name: Coverage Report
+name: Build with Quality Scans
 on:
   push:
     branches:
