@@ -1,0 +1,18 @@
+name: Coveralls
+
+on:
+  workflow_call:
+
+jobs:
+  coveralls:
+    name: Coveralls
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: coverage-report
+          path: ./coverage/
+      - run: ls -R
+      - uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
