@@ -24,23 +24,10 @@ jobs:
     name: Coveralls
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: coverage-report
-          path: ./coverage/
-      - run: ls -R
-      - uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ./.github/workflows/coveralls.yml
   codecov:
     needs: test
     name: Codecov
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: coverage-report
-          path: ./coverage/
-      - run: ls -R
-      - name: Upload coverage reports to Codecov with GitHub Action
-        uses: codecov/codecov-action@v3
+      - uses: ./.github/workflows/codecov.yml
